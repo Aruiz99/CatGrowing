@@ -7,7 +7,7 @@ CatGrowing QGIS Plugin
 
 
 
-> **Region‑growing analysis for categorical raster & vector data**
+> **Region‑growing algorithm for categorical raster data**
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![QGIS 3.x](https://img.shields.io/badge/QGIS-3.x-green.svg)](https://qgis.org)
@@ -134,30 +134,63 @@ Each seed is processed independently and results are merged into a final raster 
 
 ---
 
+
 ## Example
 
-> *The `examples/` folder contains sample data from the Sierra de Los Filabres (SE Spain).*  Below is a minimal Python Processing call:
+### Input Data
 
-```python
-import processing
+The plugin includes example data in the `example` folder of the repository. To test the plugin, follow these steps:
 
-params = {
-    'INPUT_VECTOR': 'seed_polygons.gpkg|layername=seeds',
-    'INPUT_RASTER': 'land_condition.tif',
-    'RASTERIZE_FIELD': 'seed_id',
-    'SIZE': 5,
-    'THRESHOLD': 0.6,
-    'OUTPUT_RASTERIZE': 'memory:',
-    'OUTPUT': '/tmp/grown_regions.tif'
-}
-processing.run('script:Categorical region growing', params)
-```
+1. Navigate to the `example` folder in the cloned repository:
 
-| Original Seeds               | Grown Regions                 |
-| ---------------------------- | ----------------------------- |
-| ![Seeds](docs/img/seeds.png) | ![Output](docs/img/grown.png) |
+   ```
+   example/
+   ├── CategoricalRasterData/
+   │   ├── PIE-CLC2018_V2020_1K.RDC
+   │   ├── PIE-CLC2018_V2020_1K.RST
+   │   └── PIE-CLC2018_V2020_1K.smp
+   ├── VectorData/
+   │   ├── RedNature2000_ExampleZones.dbf
+   │   ├── RedNature2000_ExampleZones.prj
+   │   ├── RedNature2000_ExampleZones.shp
+   │   └── RedNature2000_ExampleZones.shx
+   ```
+
+2. Use the following files:
+
+   * **Vector Layer**: `VectorData/RedNature2000_ExampleZones.shp` (contains seed polygons).
+   * **Raster Layer**: `CategoricalRasterData/PIE-CLC2018_V2020_1K.RST` (categorical raster data).
+
+### Parameters
+
+Set the following parameters in the plugin dialog:
+
+| Parameter          | Value                                                    |
+| ------------------ | -------------------------------------------------------- |
+| Input Vector Layer | `example/VectorData/RedNature2000_ExampleZones.shp`      |
+| Input Raster Layer | `example/CategoricalRasterData/PIE-CLC2018_V2020_1K.RST` |
+| Rasterize Field    | `OBJECT_ID`  |
+| Kernel Size        | `3`                                                      |
+| Threshold          | `0.57317317`                                             |
+
+### Outputs
+
+After running the plugin, the following output files will be generated:
+
+| Output File                    | Description                                   |
+| ------------------------------ | --------------------------------------------- |
+| `example/rasterized_seeds.tif` | Rasterized version of the input vector layer. |
+| `example/grown_regions.tif`    | Final raster representing the grown regions.  |
+
+### Steps to Run
+
+1. Open QGIS and load the plugin.
+2. Select the input files from the `example` folder.
+3. Configure the parameters as shown above.
+4. Run the algorithm and verify the outputs in the `example` folder.
 
 ---
+
 
 ## Citation
 
