@@ -7,7 +7,7 @@ CatGrowing QGIS Plugin
 
 
 
-> **Region‑growing algorithm for categorical raster data**
+> **A region‑growing algorithm for categorical raster data**
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![QGIS 3.x](https://img.shields.io/badge/QGIS-3.x-green.svg)](https://qgis.org)
