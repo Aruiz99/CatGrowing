@@ -119,7 +119,9 @@ The *CatGrowing* workflow can be understood as an **iterative, histogram‑based
     > $D = \sqrt{2\left(1 - \frac{\sum_{i=1}^{n} f_{i1} f_{i2}}{\sqrt{\left(\sum_{i=1}^{n} f_{i1}^{2}\right)\left(\sum_{i=1}^{n} f_{i2}^{2}\right)}}\right)}$
     >
     > * `D ∈ [0, √2]`; smaller values mean greater similarity.
-
+    >
+    > ---
+    > **Reference**: Orlóci, L. (1967). *An agglomerative method for classification of plant communities*. *The Journal of Ecology*, 55(1), 193–206. [https://doi.org/10.2307/2257725](https://doi.org/10.2307/2257725)
 
 
 8. **Growth** – After every frontier pixel has been evaluated the queued pixels are added to the region and steps 1 – 4 repeat with the updated frontier. The loop stops when **no additional pixels** satisfy the dissimilarity criterion.
