@@ -15,7 +15,7 @@ CatGrowing QGIS Plugin
 ---
 
 CatGrowing is a **QGIS Processing** plugin that implements a histogram‑based *region‑growing* algorithm.
-Starting from user‑supplied vector *seed* polygons and a categorical raster, the tool expands each seed until the surrounding landscape diverges (according to the **Orloci Córd distance**) beyond a user‑defined threshold.
+Starting from user‑supplied vector *seed* polygons and a categorical raster, the tool expands each seed until the surrounding landscape diverges (according to the **Orloci Chord distance**) beyond a user‑defined threshold.
 
 This tool is particularly useful for **delineating spatial regions of similar categorical composition**, such as ecological patches, land systems, or any application requiring cluster growth in categorical maps.
 
@@ -30,7 +30,8 @@ This tool is particularly useful for **delineating spatial regions of similar ca
 4. [Algorithm Workflow](#algorithmworkflow)
 5. [Example](#example)
 6. [Citation](#citation)
-7. [License](#license)
+7. [Acknowledgments](#acknowledgments)
+8. [License](#license)
 
 ---
 
@@ -66,7 +67,7 @@ This tool is particularly useful for **delineating spatial regions of similar ca
    * *Input raster layer* – categorical base map
    * *Rasterize field* – unique ID for every seed polygon
    * *Kernel size* – controls neighbourhood window
-   * *Threshold* – similarity tolerance (`0 = strict`, `√2 = max`)
+   * *Threshold* – dissimilarity tolerance (`0 = strict`, `√2 = max`)
 5. **Run** – Two new rasters appear in the layer list:
 
    * *Rasterised input* – seed IDs as raster
@@ -110,13 +111,9 @@ The *CatGrowing* workflow can be understood as an **iterative, histogram‑based
    ![Image](https://github.com/user-attachments/assets/d8a1f12e-db7d-41a1-b0cb-728ff9ad31c7)
    <!-- Salto adicional -->
    
-6. **Similarity test** – The kernel histogram is compared with the *seed’s* baseline histogram using the **Orloci Córd distance**. If the distance `D` is below the chosen **threshold** the **centre pixel** of the kernel is marked as *similar* and queued for inclusion.
-   
-   <!-- Salto adicional -->
-   ![Image](https://github.com/user-attachments/assets/322b8610-f163-4a4c-94db-2f275fee8d73)
-   <!-- Salto adicional -->
+6. **Dissimilarity test** – The *sample's* histogram is compared with the *seed’s* baseline histogram using the **Orloci Chord distance**. If the distance `D` is below the chosen **threshold** the **centre pixel** of the kernel is marked as *similar* and queued for inclusion.
  
-    > ### Orloci Córd Distance  
+    > ### Orloci Chord Distance  
     > For two frequency vectors **f₁** and **f₂** of length *n*:
     >
     > $D = \sqrt{2\left(1 - \frac{\sum_{i=1}^{n} f_{i1} f_{i2}}{\sqrt{\left(\sum_{i=1}^{n} f_{i1}^{2}\right)\left(\sum_{i=1}^{n} f_{i2}^{2}\right)}}\right)}$
@@ -125,7 +122,7 @@ The *CatGrowing* workflow can be understood as an **iterative, histogram‑based
 
 
 
-8. **Growth** – After every frontier pixel has been evaluated the queued pixels are added to the region and steps 1 – 4 repeat with the updated frontier. The loop stops when **no additional pixels** satisfy the similarity criterion.
+8. **Growth** – After every frontier pixel has been evaluated the queued pixels are added to the region and steps 1 – 4 repeat with the updated frontier. The loop stops when **no additional pixels** satisfy the dissimilarity criterion.
 
 Each seed is processed independently and results are merged into a final raster at the end of the run.
 
@@ -165,6 +162,16 @@ processing.run('script:Categorical region growing', params)
 If you use CatGrowing in scientific work, please cite:
 
 > Ruiz‑Rancaño, A. & del Barrio Escribano, G. (2025).  *CatGrowing: A QGIS plugin for categorical region‑growing analysis*.  Consejo Superior de Investigaciones Científicas (CSIC), Estación Experimental de Zonas Áridas (EEZA).  DOI: `placeholder:10.5281/zenodo.1234567`
+
+---
+
+## Acknowledgments
+
+We would like to thank all partner institutions, experts, and contributors whose support and collaboration have made the **MedConecta** project possible. The development of the **CatGrowing** plugin was carried out as part of this project, with the aim of supporting research and analysis of ecological connectivity in Mediterranean arid regions.
+
+Special thanks go to the data providers — including the **Subdirección de Espacios Naturales Protegidos** of the **Comunidad Valenciana** and **Andalucía**, the **Dirección General de Patrimonio Natural y Acción Climática**, and the **Consejería de Agua, Agricultura, Ganadería, Pesca, Medio Ambiente y Emergencia** of the **Region of Murcia** — for their valuable contributions.
+
+**MedConecta** has been selected under the 2021 call for support to biodiversity management research programmes and projects. It is supported by **Fundación Biodiversidad** of the **Ministry for the Ecological Transition and the Demographic Challenge (MITECO)**, within the framework of the **Recovery, Transformation and Resilience Plan (PRTR)**, funded by the **European Union – NextGenerationEU**.
 
 ---
 
