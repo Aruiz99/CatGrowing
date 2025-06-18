@@ -7,12 +7,12 @@
 [general]
 name= CatGrowing
 qgisMinimumVersion=3.30
-description=Categorical region-growing algorithm for spatial analysis using raster and vector data.
+description=Region-growing algorithm for categorical raster data.
 version=0.1.0
-author= Alberto Ruiz-Rancaño (EEZA-CSIC)
+author= Alberto Ruiz-Rancaño, Gabriel del Barrio Escribano (EEZA-CSIC)
 email=arranca@eeza.csic.es
 
-about=The CatGrowing plugin implements a categorical region-growing algorithm designed to analyze and expand areas with similar characteristics to initial seeds. Using a categorical raster map and a vector seed map, the plugin identifies regions akin to the seeds by comparing histograms of pixel categories. The algorithm iteratively grows regions based on the Orloci coefficient, which measures similarity between the seed's composition and its surroundings. This tool is ideal for spatial analysis tasks requiring precise region delineation based on categorical data.
+about=The CatGrowing plugin implements a categorical region-growing algorithm designed to analyze and expand areas with similar characteristics to initial seeds. Using a categorical raster map and a vector seed map, the plugin identifies regions akin to the seeds by comparing histograms of pixel categories. The algorithm iteratively grows regions based on the Orloci Chord distance, which measures dissimilarity between the seed's composition and its surroundings. This tool is ideal for spatial analysis tasks requiring region delineation based on categorical data.
 
 tracker=https://github.com/Aruiz99/CatGrowing/issues
 repository=https://github.com/Aruiz99/CatGrowing

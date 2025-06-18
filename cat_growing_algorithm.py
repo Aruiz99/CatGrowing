@@ -550,7 +550,7 @@ class CatGrowingAlgorithm(QgsProcessingAlgorithm):
             "The CatGrowing plugin is a QGIS processing tool designed to perform a region-growing algorithm for spatial analysis. "
             "It starts with an initial set of seeds provided as a vector layer and analyzes their surroundings using a categorical raster layer "
             "The algorithm identifies and expands regions by comparing the histogram of categories within the seed areas. "
-            "to those in their surroundings, using the Orloci Cord Distance as a similarity metric. "
+            "to those in their surroundings, using the Orloci Chord Distance as a similarity metric. "
             "A user-defined threshold determines the inclusion of new areas into the growing regions. "
             "The plugin outputs a rasterized version of the input vector layer and a final raster representing the grown regions. "
             "This tool is particularly useful spatial studies requiring categorical data analysis. "

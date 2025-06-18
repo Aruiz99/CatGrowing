@@ -1,0 +1,72 @@
+file format : IDRISI Raster A.1
+file title  : 
+data type   : byte
+file type   : binary
+columns     : 1259
+rows        : 909
+ref. system : etrs89_epsg25830
+ref. units  : m
+unit dist.  : 1.0000000
+min. X      : -108000.0000000
+max. X      : 1151000.0000000
+min. Y      : 3970000.0000000
+max. Y      : 4879000.0000000
+pos'n error : unknown
+resolution  : 1000
+min. value  : 0
+max. value  : 41
+display min : 0
+display max : 41
+value units : unspecified
+value error : unknown
+flag value  : 0
+flag def'n  : background
+legend cats : 44
+code      1 : 111-CONTINIOUS URBAN FABRIC
+code      2 : 112-DISCONTINUOUS URBAN FABRIC
+code      3 : 121-INDUSTRIAL OR COMMERCIAL UNTS
+code      4 : 122-ROAD AND RAILNETWORKS AND ASSOCIATED LAND
+code      5 : 123-PORT AREAS
+code      6 : 124-AIRPORTS
+code      7 : 131-MINERAL EXTRACTION SITES
+code      8 : 132-DUMP SITES
+code      9 : 133-CONSTRUCTION SITES
+code     10 : 141-GREEN URBAN AREAS
+code     11 : 142-SPORT AND LEISURE FACILITIES
+code     12 : 211-NON-IRRIGATED ARABLE LAND
+code     13 : 212-PERMANENTLY IRRIGATED LAND
+code     14 : 213-RICE FIELDS
+code     15 : 221-VINEYARDS
+code     16 : 222-FRUIT TREES AND BERRY PLANTATIONS
+code     17 : 223-OLIVE GROVES
+code     18 : 231-PASTURES
+code     19 : 241-ANNUAL CROPS ASSOCIATED WITH PERMANENT CROPS
+code     20 : 242-COMPLEX CULTIVATION PATTERNS
+code     21 : 243-AGRICULTURE, WITH SIGNIFICANT AREAS OF NATURAL VEGETATION
+code     22 : 244-AGRO-FORESTRY AREAS
+code     23 : 311-BROAD-LEAVED FOREST
+code     24 : 312-CONIFEROUS FOREST
+code     25 : 313-MIXED FOREST
+code     26 : 321-NATURAL GRASSLAND
+code     27 : 322-MOORS AND HEATHLAND
+code     28 : 323-SCLEROPHYLLOUS VEGETATION
+code     29 : 324-TRANSITIONAL WOODLAND-SHRUB
+code     30 : 331-BEACHES, DUNES, AND SAND PLAINS
+code     31 : 332-BARE ROCK
+code     32 : 333-SPARSELY VEGETATED AREAS
+code     33 : 334-BURNT AREAS
+code     34 : 335-GLACIERS AND PERPETUAL SNOW
+code     35 : 411-INLAND MARSHES
+code     36 : 412-PEAT BOGS
+code     37 : 421-SALT-MARSHES
+code     38 : 422-SALINES
+code     39 : 423-INTERTIDAL FLATS
+code     40 : 511-WATER COURSES
+code     41 : 512-WATER BODIES
+code     42 : 521-COASTAL LAGOONS
+code     43 : 522-ESTUARIES
+code     44 : 523-SEA AND OCEAN
+lineage     : This file was created by the POINTRAS module with the command line:
+lineage     : C:\00_TRABAJO\00_DATOS\GIS-ptolomeo\Iberia-CLC\tmp_clc_c.vct*C:\00_TRABAJO\00_DATOS\GIS-ptolomeo\Iberia-CLC\tmp015.rst*1*C:\00_TRABAJO\00_DATOS\GIS-ptolomeo\Iberia-CLC\PIE-CLC2018_V2020_1K.rst
+lineage     : This file was created by the CONVERT module with the command line:
+lineage     : 1*C:\00_TRABAJO\00_DATOS\GIS-ptolomeo\Iberia-CLC\PIE-CLC2018_V2020_1K.rst*C:\00_TRABAJO\00_DATOS\GIS-ptolomeo\Iberia-CLC\PIE-CLC2018_V2020_1K.rst*3*2*2
