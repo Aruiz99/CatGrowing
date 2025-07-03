@@ -196,8 +196,9 @@ After running the plugin, the following output files will be generated:
 
 If you use CatGrowing in scientific work, please cite:
 
-> Ruiz‑Rancaño, A. & del Barrio Escribano, G. (2025).  *CatGrowing: A QGIS plugin for categorical region‑growing analysis*.  Consejo Superior de Investigaciones Científicas (CSIC), Estación Experimental de Zonas Áridas (EEZA).  DOI: `placeholder:10.5281/zenodo.1234567`
+> Ruiz‑Rancaño, A. & del Barrio Escribano, G. (2025).  *CatGrowing: A QGIS plugin for categorical region‑growing analysis*.  Consejo Superior de Investigaciones Científicas (CSIC), Estación Experimental de Zonas Áridas (EEZA).  -  [https://doi.org/10.5281/zenodo.15798474](https://doi.org/10.5281/zenodo.15798474)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15798474.svg)](https://doi.org/10.5281/zenodo.15798474)
 ---
 
 ## Acknowledgments
