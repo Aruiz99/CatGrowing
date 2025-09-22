@@ -130,7 +130,7 @@ Each seed is processed independently and results are merged into a final raster 
 
 
 
-> **Why use a fixed seed histogram?**  Keeping the reference composition constant prevents *mode‑locking*. The algorithm does not dilute the seed’s identity as it grows, which leads to clearer region boundaries – especially useful when working with highly heterogeneous categorical rasters.
+> **Why use a fixed seed histogram?**  Keeping the reference composition constant ensures stability during growth. The algorithm preserves the seed’s identity as it expands, which leads to clearer region boundaries – especially useful when working with highly heterogeneous categorical rasters.
 
 ---
 
